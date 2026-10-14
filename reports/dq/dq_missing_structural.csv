@@ -1,0 +1,5 @@
+tình huống,số ô,% tổng số ô
+sales = 0 và giá trống (không áp dụng),1946496,70.66093246485369
+sales = 0 nhưng có giá,0,0.0
+sales > 0 và giá trống (thiếu thật),0,0.0
+sales > 0 và có giá,808203,29.339067535146306

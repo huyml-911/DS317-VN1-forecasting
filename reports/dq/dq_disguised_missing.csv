@@ -1,0 +1,6 @@
+file,chuỗi rỗng '',"token giả thiếu (nan, null, unknown, -, ...)",không chuyển được sang số (trừ rỗng),giá trị âm,giá trị bằng 0,giá trị 999/9999/99999
+Phase 0 - Sales.csv,0,0,0,0,1836437,5
+Phase 0 - Price.csv,1836437,0,0,0,4755,24
+Phase 1 - Sales.csv,0,0,0,0,110059,0
+Phase 1 - Price.csv,110059,0,0,0,850,4
+Phase 2 - Sales.csv,0,0,0,0,117297,0

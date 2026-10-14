@@ -1,0 +1,9 @@
+mục,giá trị
+Khoảng thời gian Phase 0+1,2020-07-06 .. 2024-01-01 (183 tuần)
+"Phase 2 (chỉ số lượng, không có giá)",2024-01-08 .. 2024-04-01 (13 tuần)
+Tổng số tuần liên tục,196 (lịch đầy đủ) so với 196 (trong dữ liệu)
+Tuần thiếu trong lịch,0
+Huấn luyện,"131 tuần, 2020-07-06 .. 2023-01-02"
+Kiểm tra,"52 tuần, 2023-01-09 .. 2024-01-01"
+Mốc dự báo 13 tuần không chồng nhau trong tập kiểm tra,"4: 2023-01-09, 2023-04-10, 2023-07-10, 2023-10-09"
+Mốc dự báo 13 tuần nếu trượt từng tuần,40

@@ -1,0 +1,6 @@
+file,số tuần,tuần đầu,tuần cuối,mọi cột là thứ Hai,mọi khoảng cách = 7 ngày,cột tuần trùng
+Phase 0 - Sales.csv,170,2020-07-06,2023-10-02,True,True,0
+Phase 0 - Price.csv,170,2020-07-06,2023-10-02,True,True,0
+Phase 1 - Sales.csv,13,2023-10-09,2024-01-01,True,True,0
+Phase 1 - Price.csv,13,2023-10-09,2024-01-01,True,True,0
+Phase 2 - Sales.csv,13,2024-01-08,2024-04-01,True,True,0

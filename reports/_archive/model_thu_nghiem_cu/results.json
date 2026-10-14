@@ -1,0 +1,1212 @@
+{
+ "setup": {
+  "horizon": 13,
+  "val_origins": [
+   "2022-01-10",
+   "2022-04-11",
+   "2022-07-11",
+   "2022-10-10"
+  ],
+  "test_origins": [
+   "2023-01-09",
+   "2023-04-10",
+   "2023-07-10",
+   "2023-10-09"
+  ],
+  "metric": "WMAPE = tổng |sai số| / tổng doanh thu thực tế, gộp 4 mốc x 13 tuần",
+  "train_rows_per_fit": {
+   "131_revenue_squared_error": 1200000,
+   "131_revenue_poisson": 1200000,
+   "131_units_squared_error": 1200000,
+   "131_units_poisson": 1200000,
+   "144_revenue_squared_error": 1200000,
+   "144_revenue_poisson": 1200000,
+   "144_units_squared_error": 1200000,
+   "144_units_poisson": 1200000,
+   "157_revenue_squared_error": 1200000,
+   "157_revenue_poisson": 1200000,
+   "157_units_squared_error": 1200000,
+   "157_units_poisson": 1200000,
+   "170_revenue_squared_error": 1200000,
+   "170_revenue_poisson": 1200000,
+   "170_units_squared_error": 1200000,
+   "170_units_poisson": 1200000
+  }
+ },
+ "choice_by_class_from_validation": {
+  "smooth": "gbm_units_poisson",
+  "erratic": "gbm_revenue_poisson",
+  "intermittent": "gbm_units_poisson",
+  "lumpy": "gbm_units_poisson",
+  "short": "naive",
+  "dormant": "naive"
+ },
+ "best_single_method_on_validation": "gbm_revenue_poisson",
+ "best_gbm_on_validation": "gbm_revenue_poisson",
+ "test_revenue_share_by_class": {
+  "smooth": 0.4929801667457907,
+  "erratic": 0.27472391308226196,
+  "intermittent": 0.040642345671241524,
+  "lumpy": 0.05965357759048008,
+  "short": 0.10922406593068192,
+  "dormant": 0.0016874521092930682,
+  "chua_ra_mat": 0.021088478870250726
+ },
+ "test_series_origin_count_by_class": {
+  "smooth": 7987,
+  "erratic": 6380,
+  "intermittent": 12537,
+  "lumpy": 7755,
+  "short": 8980,
+  "dormant": 8913,
+  "chua_ra_mat": 7660
+ },
+ "validation": {
+  "naive": {
+   "wmape_series_all": 0.5456707806955147,
+   "bias_all": -0.07769556459237671,
+   "wmape_series_existing": 0.5321187434280549,
+   "wmape_total_level": 0.12595911108552446,
+   "by_class": {
+    "smooth": {
+     "wmape": 0.38145544286179084,
+     "abs_err": 95374579.22799072,
+     "actual": 250028098.9896555,
+     "series_origin_count": 6696
+    },
+    "erratic": {
+     "wmape": 0.6760217983022466,
+     "abs_err": 71440793.03730068,
+     "actual": 105678238.80341767,
+     "series_origin_count": 4109
+    },
+    "intermittent": {
+     "wmape": 0.8134179787327883,
+     "abs_err": 15381780.17727372,
+     "actual": 18910056.796675142,
+     "series_origin_count": 8529
+    },
+    "lumpy": {
+     "wmape": 0.9069516166424728,
+     "abs_err": 20426383.005019024,
+     "actual": 22522020.613003943,
+     "series_origin_count": 5089
+    },
+    "short": {
+     "wmape": 0.7251957215879661,
+     "abs_err": 31373076.438279055,
+     "actual": 43261529.962671615,
+     "series_origin_count": 6550
+    },
+    "dormant": {
+     "wmape": 1.0,
+     "abs_err": 744747.8103727999,
+     "actual": 744747.8103727999,
+     "series_origin_count": 4982
+    }
+   }
+  },
+  "mean13": {
+   "wmape_series_all": 0.5724790277562524,
+   "bias_all": -0.017541389783296297,
+   "wmape_series_existing": 0.5597266448975462,
+   "wmape_total_level": 0.1557275148502486,
+   "by_class": {
+    "smooth": {
+     "wmape": 0.37352984387945865,
+     "abs_err": 93392956.78108385,
+     "actual": 250028098.9896555,
+     "series_origin_count": 6696
+    },
+    "erratic": {
+     "wmape": 0.7567402850068553,
+     "abs_err": 79970980.5511208,
+     "actual": 105678238.80341767,
+     "series_origin_count": 4109
+    },
+    "intermittent": {
+     "wmape": 0.7649192758163075,
+     "abs_err": 14464666.950557994,
+     "actual": 18910056.796675142,
+     "series_origin_count": 8529
+    },
+    "lumpy": {
+     "wmape": 0.9984979134335242,
+     "abs_err": 22488190.58839126,
+     "actual": 22522020.613003943,
+     "series_origin_count": 5089
+    },
+    "short": {
+     "wmape": 0.8288864555441067,
+     "abs_err": 35858896.23217405,
+     "actual": 43261529.962671615,
+     "series_origin_count": 6550
+    },
+    "dormant": {
+     "wmape": 1.0,
+     "abs_err": 744747.8103727999,
+     "actual": 744747.8103727999,
+     "series_origin_count": 4982
+    }
+   }
+  },
+  "mean26": {
+   "wmape_series_all": 0.5916715573191074,
+   "bias_all": -0.010636861841909788,
+   "wmape_series_existing": 0.5794916621297852,
+   "wmape_total_level": 0.14680491243721353,
+   "by_class": {
+    "smooth": {
+     "wmape": 0.3969817453778849,
+     "abs_err": 99256591.13042802,
+     "actual": 250028098.9896555,
+     "series_origin_count": 6696
+    },
+    "erratic": {
+     "wmape": 0.7624343785824229,
+     "abs_err": 80572722.33176865,
+     "actual": 105678238.80341767,
+     "series_origin_count": 4109
+    },
+    "intermittent": {
+     "wmape": 0.7932237464390708,
+     "abs_err": 14999906.097634269,
+     "actual": 18910056.796675142,
+     "series_origin_count": 8529
+    },
+    "lumpy": {
+     "wmape": 1.0360365269490208,
+     "abs_err": 23333636.01577086,
+     "actual": 22522020.613003943,
+     "series_origin_count": 5089
+    },
+    "short": {
+     "wmape": 0.8490700171260231,
+     "abs_err": 36732067.98630355,
+     "actual": 43261529.962671615,
+     "series_origin_count": 6550
+    },
+    "dormant": {
+     "wmape": 1.0,
+     "abs_err": 744747.8103727999,
+     "actual": 744747.8103727999,
+     "series_origin_count": 4982
+    }
+   }
+  },
+  "mean52": {
+   "wmape_series_all": 0.6071669354218631,
+   "bias_all": -0.004744766600566904,
+   "wmape_series_existing": 0.595449246783648,
+   "wmape_total_level": 0.11621155735675712,
+   "by_class": {
+    "smooth": {
+     "wmape": 0.40980762555557326,
+     "abs_err": 102463421.56912455,
+     "actual": 250028098.9896555,
+     "series_origin_count": 6696
+    },
+    "erratic": {
+     "wmape": 0.7703304409915099,
+     "abs_err": 81407164.30064283,
+     "actual": 105678238.80341767,
+     "series_origin_count": 4109
+    },
+    "intermittent": {
+     "wmape": 0.846100613741819,
+     "abs_err": 15999810.661559492,
+     "actual": 18910056.796675142,
+     "series_origin_count": 8529
+    },
+    "lumpy": {
+     "wmape": 1.0705268606501919,
+     "abs_err": 24110428.02233802,
+     "actual": 22522020.613003943,
+     "series_origin_count": 5089
+    },
+    "short": {
+     "wmape": 0.8490700171260231,
+     "abs_err": 36732067.98630355,
+     "actual": 43261529.962671615,
+     "series_origin_count": 6550
+    },
+    "dormant": {
+     "wmape": 2.6403335299354214,
+     "abs_err": 1966382.6150732907,
+     "actual": 744747.8103727999,
+     "series_origin_count": 4982
+    }
+   }
+  },
+  "zero": {
+   "wmape_series_all": 1.0,
+   "bias_all": -1.0,
+   "wmape_series_existing": 1.0,
+   "wmape_total_level": 1.0000000000000113,
+   "by_class": {
+    "smooth": {
+     "wmape": 1.0,
+     "abs_err": 250028098.9896555,
+     "actual": 250028098.9896555,
+     "series_origin_count": 6696
+    },
+    "erratic": {
+     "wmape": 1.0,
+     "abs_err": 105678238.80341767,
+     "actual": 105678238.80341767,
+     "series_origin_count": 4109
+    },
+    "intermittent": {
+     "wmape": 1.0,
+     "abs_err": 18910056.796675142,
+     "actual": 18910056.796675142,
+     "series_origin_count": 8529
+    },
+    "lumpy": {
+     "wmape": 1.0,
+     "abs_err": 22522020.613003943,
+     "actual": 22522020.613003943,
+     "series_origin_count": 5089
+    },
+    "short": {
+     "wmape": 1.0,
+     "abs_err": 43261529.962671615,
+     "actual": 43261529.962671615,
+     "series_origin_count": 6550
+    },
+    "dormant": {
+     "wmape": 1.0,
+     "abs_err": 744747.8103727999,
+     "actual": 744747.8103727999,
+     "series_origin_count": 4982
+    }
+   }
+  },
+  "seasonal_naive": {
+   "wmape_series_all": 0.7823442922534374,
+   "bias_all": -0.17894234067195178,
+   "wmape_series_existing": 0.775851911535833,
+   "wmape_total_level": 0.1817426925632705,
+   "by_class": {
+    "smooth": {
+     "wmape": 0.5860144838905332,
+     "abs_err": 146520087.3875541,
+     "actual": 250028098.9896555,
+     "series_origin_count": 6696
+    },
+    "erratic": {
+     "wmape": 0.9310328518543995,
+     "abs_err": 98389912.05209622,
+     "actual": 105678238.80341767,
+     "series_origin_count": 4109
+    },
+    "intermittent": {
+     "wmape": 1.0614540123411904,
+     "abs_err": 20072155.66043063,
+     "actual": 18910056.796675142,
+     "series_origin_count": 8529
+    },
+    "lumpy": {
+     "wmape": 1.318532416378452,
+     "abs_err": 29696014.26058939,
+     "actual": 22522020.613003943,
+     "series_origin_count": 5089
+    },
+    "short": {
+     "wmape": 1.0,
+     "abs_err": 43261529.962671615,
+     "actual": 43261529.962671615,
+     "series_origin_count": 6550
+    },
+    "dormant": {
+     "wmape": 5.804990529148277,
+     "abs_err": 4323253.98581802,
+     "actual": 744747.8103727999,
+     "series_origin_count": 4982
+    }
+   }
+  },
+  "mean13_x_season": {
+   "wmape_series_all": 0.6154280160959034,
+   "bias_all": 0.08833533989793954,
+   "wmape_series_existing": 0.6039567445235671,
+   "wmape_total_level": 0.13988380194736744,
+   "by_class": {
+    "smooth": {
+     "wmape": 0.4364172406795489,
+     "abs_err": 109116573.05341856,
+     "actual": 250028098.9896555,
+     "series_origin_count": 6696
+    },
+    "erratic": {
+     "wmape": 0.76170318884375,
+     "abs_err": 80495451.48795456,
+     "actual": 105678238.80341767,
+     "series_origin_count": 4109
+    },
+    "intermittent": {
+     "wmape": 0.8093220668756718,
+     "abs_err": 15304326.25142147,
+     "actual": 18910056.796675142,
+     "series_origin_count": 8529
+    },
+    "lumpy": {
+     "wmape": 1.0218783277895562,
+     "abs_err": 23014764.762458384,
+     "actual": 22522020.613003943,
+     "series_origin_count": 5089
+    },
+    "short": {
+     "wmape": 0.8727488209608674,
+     "abs_err": 37756449.26788489,
+     "actual": 43261529.962671615,
+     "series_origin_count": 6550
+    },
+    "dormant": {
+     "wmape": 1.0,
+     "abs_err": 744747.8103727999,
+     "actual": 744747.8103727999,
+     "series_origin_count": 4982
+    }
+   }
+  },
+  "mean26_x_season": {
+   "wmape_series_all": 0.6414089453337433,
+   "bias_all": 0.10024811982451616,
+   "wmape_series_existing": 0.6307126503781728,
+   "wmape_total_level": 0.14655112150782415,
+   "by_class": {
+    "smooth": {
+     "wmape": 0.465863251479377,
+     "abs_err": 116478903.15652844,
+     "actual": 250028098.9896555,
+     "series_origin_count": 6696
+    },
+    "erratic": {
+     "wmape": 0.7838822001518911,
+     "abs_err": 82839290.3414,
+     "actual": 105678238.80341767,
+     "series_origin_count": 4109
+    },
+    "intermittent": {
+     "wmape": 0.8284505469274566,
+     "abs_err": 15666046.895634789,
+     "actual": 18910056.796675142,
+     "series_origin_count": 8529
+    },
+    "lumpy": {
+     "wmape": 1.0704251288880393,
+     "abs_err": 24108136.817493826,
+     "actual": 22522020.613003943,
+     "series_origin_count": 5089
+    },
+    "short": {
+     "wmape": 0.8875879683111624,
+     "abs_err": 38398413.48560017,
+     "actual": 43261529.962671615,
+     "series_origin_count": 6550
+    },
+    "dormant": {
+     "wmape": 1.0,
+     "abs_err": 744747.8103727999,
+     "actual": 744747.8103727999,
+     "series_origin_count": 4982
+    }
+   }
+  },
+  "gbm_revenue_squared_error": {
+   "wmape_series_all": 0.5544446386903163,
+   "bias_all": -0.005488078103333953,
+   "wmape_series_existing": 0.541154313955251,
+   "wmape_total_level": 0.08892769604354701,
+   "by_class": {
+    "smooth": {
+     "wmape": 0.3791927176262925,
+     "abs_err": 94808834.33882314,
+     "actual": 250028098.9896555,
+     "series_origin_count": 6696
+    },
+    "erratic": {
+     "wmape": 0.6490064868268642,
+     "abs_err": 68585862.4998565,
+     "actual": 105678238.80341767,
+     "series_origin_count": 4109
+    },
+    "intermittent": {
+     "wmape": 0.7652568842706863,
+     "abs_err": 14471051.145605333,
+     "actual": 18910056.796675142,
+     "series_origin_count": 8529
+    },
+    "lumpy": {
+     "wmape": 0.9448985506343948,
+     "abs_err": 21281024.634585388,
+     "actual": 22522020.613003943,
+     "series_origin_count": 5089
+    },
+    "short": {
+     "wmape": 0.8976990246665705,
+     "abs_err": 38835833.25307392,
+     "actual": 43261529.962671615,
+     "series_origin_count": 6550
+    },
+    "dormant": {
+     "wmape": 1.0,
+     "abs_err": 744747.8103727999,
+     "actual": 744747.8103727999,
+     "series_origin_count": 4982
+    }
+   }
+  },
+  "gbm_revenue_poisson": {
+   "wmape_series_all": 0.5253022083217694,
+   "bias_all": -0.042504060025809524,
+   "wmape_series_existing": 0.5111426035896494,
+   "wmape_total_level": 0.0859850227934098,
+   "by_class": {
+    "smooth": {
+     "wmape": 0.36381084146707093,
+     "abs_err": 90962933.08383867,
+     "actual": 250028098.9896555,
+     "series_origin_count": 6696
+    },
+    "erratic": {
+     "wmape": 0.6269082362737777,
+     "abs_err": 66250558.300769664,
+     "actual": 105678238.80341767,
+     "series_origin_count": 4109
+    },
+    "intermittent": {
+     "wmape": 0.7672567601489948,
+     "abs_err": 14508868.912050448,
+     "actual": 18910056.796675142,
+     "series_origin_count": 8529
+    },
+    "lumpy": {
+     "wmape": 0.8927700010444882,
+     "abs_err": 20106984.366195515,
+     "actual": 22522020.613003943,
+     "series_origin_count": 5089
+    },
+    "short": {
+     "wmape": 0.7608088406160819,
+     "abs_err": 32913754.45417808,
+     "actual": 43261529.962671615,
+     "series_origin_count": 6550
+    },
+    "dormant": {
+     "wmape": 1.0,
+     "abs_err": 744747.8103727999,
+     "actual": 744747.8103727999,
+     "series_origin_count": 4982
+    }
+   }
+  },
+  "gbm_units_squared_error": {
+   "wmape_series_all": 0.5612932714264652,
+   "bias_all": 0.006200174442330504,
+   "wmape_series_existing": 0.5482072323110074,
+   "wmape_total_level": 0.09476573739820963,
+   "by_class": {
+    "smooth": {
+     "wmape": 0.3787924852661991,
+     "abs_err": 94708765.00267485,
+     "actual": 250028098.9896555,
+     "series_origin_count": 6696
+    },
+    "erratic": {
+     "wmape": 0.6476997990082458,
+     "abs_err": 68447774.03251903,
+     "actual": 105678238.80341767,
+     "series_origin_count": 4109
+    },
+    "intermittent": {
+     "wmape": 0.7756100877925479,
+     "abs_err": 14666830.812231274,
+     "actual": 18910056.796675142,
+     "series_origin_count": 8529
+    },
+    "lumpy": {
+     "wmape": 0.9481726698006586,
+     "abs_err": 21354764.413937416,
+     "actual": 22522020.613003943,
+     "series_origin_count": 5089
+    },
+    "short": {
+     "wmape": 0.9688938220488845,
+     "abs_err": 41915829.11321524,
+     "actual": 43261529.962671615,
+     "series_origin_count": 6550
+    },
+    "dormant": {
+     "wmape": 1.0,
+     "abs_err": 744747.8103727999,
+     "actual": 744747.8103727999,
+     "series_origin_count": 4982
+    }
+   }
+  },
+  "gbm_units_poisson": {
+   "wmape_series_all": 0.5269255387028297,
+   "bias_all": -0.0441454294040262,
+   "wmape_series_existing": 0.5128143557602111,
+   "wmape_total_level": 0.09803326563205594,
+   "by_class": {
+    "smooth": {
+     "wmape": 0.3610617078166517,
+     "abs_err": 90275572.42335586,
+     "actual": 250028098.9896555,
+     "series_origin_count": 6696
+    },
+    "erratic": {
+     "wmape": 0.6391932177656652,
+     "abs_err": 67548813.50856492,
+     "actual": 105678238.80341767,
+     "series_origin_count": 4109
+    },
+    "intermittent": {
+     "wmape": 0.7604858185172888,
+     "abs_err": 14380830.021227915,
+     "actual": 18910056.796675142,
+     "series_origin_count": 8529
+    },
+    "lumpy": {
+     "wmape": 0.8896552686605927,
+     "abs_err": 20036834.29924143,
+     "actual": 22522020.613003943,
+     "series_origin_count": 5089
+    },
+    "short": {
+     "wmape": 0.7683161804803553,
+     "abs_err": 33238533.462656304,
+     "actual": 43261529.962671615,
+     "series_origin_count": 6550
+    },
+    "dormant": {
+     "wmape": 1.0,
+     "abs_err": 744747.8103727999,
+     "actual": 744747.8103727999,
+     "series_origin_count": 4982
+    }
+   }
+  },
+  "chon_theo_cum": {
+   "wmape_series_all": 0.5199616642066743,
+   "bias_all": -0.061747633932769,
+   "wmape_series_existing": 0.505642758135787,
+   "wmape_total_level": 0.09987049229053879,
+   "by_class": {
+    "smooth": {
+     "wmape": 0.3610617078166517,
+     "abs_err": 90275572.42335586,
+     "actual": 250028098.9896555,
+     "series_origin_count": 6696
+    },
+    "erratic": {
+     "wmape": 0.6269082362737777,
+     "abs_err": 66250558.300769664,
+     "actual": 105678238.80341767,
+     "series_origin_count": 4109
+    },
+    "intermittent": {
+     "wmape": 0.7604858185172888,
+     "abs_err": 14380830.021227915,
+     "actual": 18910056.796675142,
+     "series_origin_count": 8529
+    },
+    "lumpy": {
+     "wmape": 0.8896552686605927,
+     "abs_err": 20036834.29924143,
+     "actual": 22522020.613003943,
+     "series_origin_count": 5089
+    },
+    "short": {
+     "wmape": 0.7251957215879661,
+     "abs_err": 31373076.438279055,
+     "actual": 43261529.962671615,
+     "series_origin_count": 6550
+    },
+    "dormant": {
+     "wmape": 1.0,
+     "abs_err": 744747.8103727999,
+     "actual": 744747.8103727999,
+     "series_origin_count": 4982
+    }
+   }
+  }
+ },
+ "test": {
+  "naive": {
+   "wmape_series_all": 0.5572239595581799,
+   "bias_all": -0.009480098514628381,
+   "wmape_series_existing": 0.5476853312229711,
+   "wmape_total_level": 0.13541962968097504,
+   "by_class": {
+    "smooth": {
+     "wmape": 0.41361262392409714,
+     "abs_err": 104922874.40954281,
+     "actual": 253674255.4279422,
+     "series_origin_count": 7987
+    },
+    "erratic": {
+     "wmape": 0.6348751467417362,
+     "abs_err": 89749437.83976923,
+     "actual": 141365492.57027197,
+     "series_origin_count": 6380
+    },
+    "intermittent": {
+     "wmape": 0.7436939847895426,
+     "abs_err": 15553208.035420638,
+     "actual": 20913451.437720083,
+     "series_origin_count": 12537
+    },
+    "lumpy": {
+     "wmape": 0.8046074906321953,
+     "abs_err": 24698325.67441067,
+     "actual": 30696117.003589824,
+     "series_origin_count": 7755
+    },
+    "short": {
+     "wmape": 0.7132735775511199,
+     "abs_err": 40088649.187599175,
+     "actual": 56203749.093349874,
+     "series_origin_count": 8980
+    },
+    "dormant": {
+     "wmape": 1.0,
+     "abs_err": 868317.1986834998,
+     "actual": 868317.1986834998,
+     "series_origin_count": 8913
+    }
+   }
+  },
+  "mean13": {
+   "wmape_series_all": 0.5725983172545306,
+   "bias_all": 0.022222740294223095,
+   "wmape_series_existing": 0.563390895377132,
+   "wmape_total_level": 0.11878637721659703,
+   "by_class": {
+    "smooth": {
+     "wmape": 0.3759817035497553,
+     "abs_err": 95376878.70251346,
+     "actual": 253674255.4279422,
+     "series_origin_count": 7987
+    },
+    "erratic": {
+     "wmape": 0.7069805538270034,
+     "abs_err": 99942654.22935802,
+     "actual": 141365492.57027197,
+     "series_origin_count": 6380
+    },
+    "intermittent": {
+     "wmape": 0.7386902429457581,
+     "abs_err": 15448562.523363762,
+     "actual": 20913451.437720083,
+     "series_origin_count": 12537
+    },
+    "lumpy": {
+     "wmape": 0.8819884287862702,
+     "abs_err": 27073620.0058357,
+     "actual": 30696117.003589824,
+     "series_origin_count": 7755
+    },
+    "short": {
+     "wmape": 0.8021174548891246,
+     "abs_err": 45082008.177984744,
+     "actual": 56203749.093349874,
+     "series_origin_count": 8980
+    },
+    "dormant": {
+     "wmape": 1.0,
+     "abs_err": 868317.1986834998,
+     "actual": 868317.1986834998,
+     "series_origin_count": 8913
+    }
+   }
+  },
+  "mean26": {
+   "wmape_series_all": 0.6045386292885593,
+   "bias_all": 0.02921615531001146,
+   "wmape_series_existing": 0.5960192906351293,
+   "wmape_total_level": 0.12487815491622638,
+   "by_class": {
+    "smooth": {
+     "wmape": 0.39756420657048924,
+     "abs_err": 100851804.08656946,
+     "actual": 253674255.4279422,
+     "series_origin_count": 7987
+    },
+    "erratic": {
+     "wmape": 0.7437255554806276,
+     "abs_err": 105137129.48761804,
+     "actual": 141365492.57027197,
+     "series_origin_count": 6380
+    },
+    "intermittent": {
+     "wmape": 0.8227638566613152,
+     "abs_err": 17206831.960997704,
+     "actual": 20913451.437720083,
+     "series_origin_count": 12537
+    },
+    "lumpy": {
+     "wmape": 0.9400439387148627,
+     "abs_err": 28855698.731306847,
+     "actual": 30696117.003589824,
+     "series_origin_count": 7755
+    },
+    "short": {
+     "wmape": 0.8417210686365283,
+     "abs_err": 47307879.748233765,
+     "actual": 56203749.093349874,
+     "series_origin_count": 8980
+    },
+    "dormant": {
+     "wmape": 1.0,
+     "abs_err": 868317.1986834998,
+     "actual": 868317.1986834998,
+     "series_origin_count": 8913
+    }
+   }
+  },
+  "mean52": {
+   "wmape_series_all": 0.6459502226324851,
+   "bias_all": 0.04846131520564094,
+   "wmape_series_existing": 0.6383230049648303,
+   "wmape_total_level": 0.11886470682665574,
+   "by_class": {
+    "smooth": {
+     "wmape": 0.42377593524120416,
+     "abs_err": 107501044.84059231,
+     "actual": 253674255.4279422,
+     "series_origin_count": 7987
+    },
+    "erratic": {
+     "wmape": 0.7970038950366913,
+     "abs_err": 112668848.20228721,
+     "actual": 141365492.57027197,
+     "series_origin_count": 6380
+    },
+    "intermittent": {
+     "wmape": 0.9397708170737198,
+     "abs_err": 19653851.345457762,
+     "actual": 20913451.437720083,
+     "series_origin_count": 12537
+    },
+    "lumpy": {
+     "wmape": 1.03753268016267,
+     "abs_err": 31848224.545321457,
+     "actual": 30696117.003589824,
+     "series_origin_count": 7755
+    },
+    "short": {
+     "wmape": 0.8417210686365283,
+     "abs_err": 47307879.748233765,
+     "actual": 56203749.093349874,
+     "series_origin_count": 8980
+    },
+    "dormant": {
+     "wmape": 2.9448892780559213,
+     "abs_err": 2557098.0083545917,
+     "actual": 868317.1986834998,
+     "series_origin_count": 8913
+    }
+   }
+  },
+  "zero": {
+   "wmape_series_all": 1.0,
+   "bias_all": -1.0,
+   "wmape_series_existing": 1.0,
+   "wmape_total_level": 1.000000000000012,
+   "by_class": {
+    "smooth": {
+     "wmape": 1.0,
+     "abs_err": 253674255.4279422,
+     "actual": 253674255.4279422,
+     "series_origin_count": 7987
+    },
+    "erratic": {
+     "wmape": 1.0,
+     "abs_err": 141365492.57027197,
+     "actual": 141365492.57027197,
+     "series_origin_count": 6380
+    },
+    "intermittent": {
+     "wmape": 1.0,
+     "abs_err": 20913451.437720083,
+     "actual": 20913451.437720083,
+     "series_origin_count": 12537
+    },
+    "lumpy": {
+     "wmape": 1.0,
+     "abs_err": 30696117.003589824,
+     "actual": 30696117.003589824,
+     "series_origin_count": 7755
+    },
+    "short": {
+     "wmape": 1.0,
+     "abs_err": 56203749.093349874,
+     "actual": 56203749.093349874,
+     "series_origin_count": 8980
+    },
+    "dormant": {
+     "wmape": 1.0,
+     "abs_err": 868317.1986834998,
+     "actual": 868317.1986834998,
+     "series_origin_count": 8913
+    }
+   }
+  },
+  "seasonal_naive": {
+   "wmape_series_all": 0.8428376480896043,
+   "bias_all": -0.11712526050831763,
+   "wmape_series_existing": 0.8394519335833164,
+   "wmape_total_level": 0.1477018152633761,
+   "by_class": {
+    "smooth": {
+     "wmape": 0.596452295150656,
+     "abs_err": 151304591.87062988,
+     "actual": 253674255.4279422,
+     "series_origin_count": 7987
+    },
+    "erratic": {
+     "wmape": 1.008391328563622,
+     "abs_err": 142551736.86598736,
+     "actual": 141365492.57027197,
+     "series_origin_count": 6380
+    },
+    "intermittent": {
+     "wmape": 1.239225823700903,
+     "abs_err": 25916489.084337503,
+     "actual": 20913451.437720083,
+     "series_origin_count": 12537
+    },
+    "lumpy": {
+     "wmape": 1.3424652744014032,
+     "abs_err": 41208471.13628179,
+     "actual": 30696117.003589824,
+     "series_origin_count": 7755
+    },
+    "short": {
+     "wmape": 1.0,
+     "abs_err": 56203749.093349874,
+     "actual": 56203749.093349874,
+     "series_origin_count": 8980
+    },
+    "dormant": {
+     "wmape": 6.52394157258434,
+     "abs_err": 5664850.6706812605,
+     "actual": 868317.1986834998,
+     "series_origin_count": 8913
+    }
+   }
+  },
+  "mean13_x_season": {
+   "wmape_series_all": 0.6061895495044246,
+   "bias_all": 0.11910971977039977,
+   "wmape_series_existing": 0.5977057762676203,
+   "wmape_total_level": 0.14451399578762417,
+   "by_class": {
+    "smooth": {
+     "wmape": 0.4138113716309612,
+     "abs_err": 104973291.58609957,
+     "actual": 253674255.4279422,
+     "series_origin_count": 7987
+    },
+    "erratic": {
+     "wmape": 0.6830802161231928,
+     "abs_err": 96563971.21726298,
+     "actual": 141365492.57027197,
+     "series_origin_count": 6380
+    },
+    "intermittent": {
+     "wmape": 0.9317843308879045,
+     "abs_err": 19486826.354452692,
+     "actual": 20913451.437720083,
+     "series_origin_count": 12537
+    },
+    "lumpy": {
+     "wmape": 1.0208396087432128,
+     "abs_err": 31335812.071880516,
+     "actual": 30696117.003589824,
+     "series_origin_count": 7755
+    },
+    "short": {
+     "wmape": 0.8513482184313388,
+     "abs_err": 47848961.65978539,
+     "actual": 56203749.093349874,
+     "series_origin_count": 8980
+    },
+    "dormant": {
+     "wmape": 1.0,
+     "abs_err": 868317.1986834998,
+     "actual": 868317.1986834998,
+     "series_origin_count": 8913
+    }
+   }
+  },
+  "mean26_x_season": {
+   "wmape_series_all": 0.639418461143215,
+   "bias_all": 0.1286341635805577,
+   "wmape_series_existing": 0.6316505311525578,
+   "wmape_total_level": 0.17253232261203624,
+   "by_class": {
+    "smooth": {
+     "wmape": 0.43909034047706386,
+     "abs_err": 111385915.1861208,
+     "actual": 253674255.4279422,
+     "series_origin_count": 7987
+    },
+    "erratic": {
+     "wmape": 0.7279880353792861,
+     "abs_err": 102912387.20665736,
+     "actual": 141365492.57027197,
+     "series_origin_count": 6380
+    },
+    "intermittent": {
+     "wmape": 1.0088938035508108,
+     "abs_err": 21099451.56637659,
+     "actual": 20913451.437720083,
+     "series_origin_count": 12537
+    },
+    "lumpy": {
+     "wmape": 1.0551705509110227,
+     "abs_err": 32389638.689507086,
+     "actual": 30696117.003589824,
+     "series_origin_count": 7755
+    },
+    "short": {
+     "wmape": 0.8810830221609366,
+     "abs_err": 49520169.107943706,
+     "actual": 56203749.093349874,
+     "series_origin_count": 8980
+    },
+    "dormant": {
+     "wmape": 1.0,
+     "abs_err": 868317.1986834998,
+     "actual": 868317.1986834998,
+     "series_origin_count": 8913
+    }
+   }
+  },
+  "gbm_revenue_squared_error": {
+   "wmape_series_all": 0.5611532608566019,
+   "bias_all": 0.07592362065723743,
+   "wmape_series_existing": 0.5516992806081896,
+   "wmape_total_level": 0.11970570563494479,
+   "by_class": {
+    "smooth": {
+     "wmape": 0.37849607649623007,
+     "abs_err": 96014710.3875786,
+     "actual": 253674255.4279422,
+     "series_origin_count": 7987
+    },
+    "erratic": {
+     "wmape": 0.5897637115289147,
+     "abs_err": 83372237.58035682,
+     "actual": 141365492.57027197,
+     "series_origin_count": 6380
+    },
+    "intermittent": {
+     "wmape": 1.0497219705753005,
+     "abs_err": 21953309.454734378,
+     "actual": 20913451.437720083,
+     "series_origin_count": 12537
+    },
+    "lumpy": {
+     "wmape": 0.9436422284570871,
+     "abs_err": 28966152.254246984,
+     "actual": 30696117.003589824,
+     "series_origin_count": 7755
+    },
+    "short": {
+     "wmape": 0.8314035693019527,
+     "abs_err": 46727997.60436247,
+     "actual": 56203749.093349874,
+     "series_origin_count": 8980
+    },
+    "dormant": {
+     "wmape": 1.0,
+     "abs_err": 868317.1986834998,
+     "actual": 868317.1986834998,
+     "series_origin_count": 8913
+    }
+   }
+  },
+  "gbm_revenue_poisson": {
+   "wmape_series_all": 0.5201923468894945,
+   "bias_all": 0.031026303876158297,
+   "wmape_series_existing": 0.509855954543506,
+   "wmape_total_level": 0.08567609238330758,
+   "by_class": {
+    "smooth": {
+     "wmape": 0.35437947662473307,
+     "abs_err": 89896949.87172301,
+     "actual": 253674255.4279422,
+     "series_origin_count": 7987
+    },
+    "erratic": {
+     "wmape": 0.5725894196331855,
+     "abs_err": 80944385.34697144,
+     "actual": 141365492.57027197,
+     "series_origin_count": 6380
+    },
+    "intermittent": {
+     "wmape": 0.7861425307358484,
+     "abs_err": 16440953.639670532,
+     "actual": 20913451.437720083,
+     "series_origin_count": 12537
+    },
+    "lumpy": {
+     "wmape": 0.7969931322161367,
+     "abs_err": 24464594.437564064,
+     "actual": 30696117.003589824,
+     "series_origin_count": 7755
+    },
+    "short": {
+     "wmape": 0.7866049264530544,
+     "abs_err": 44210145.9219604,
+     "actual": 56203749.093349874,
+     "series_origin_count": 8980
+    },
+    "dormant": {
+     "wmape": 1.0,
+     "abs_err": 868317.1986834998,
+     "actual": 868317.1986834998,
+     "series_origin_count": 8913
+    }
+   }
+  },
+  "gbm_units_squared_error": {
+   "wmape_series_all": 0.5849559049282286,
+   "bias_all": 0.10453699012352467,
+   "wmape_series_existing": 0.5760146998854663,
+   "wmape_total_level": 0.1383289341431387,
+   "by_class": {
+    "smooth": {
+     "wmape": 0.3829780652862817,
+     "abs_err": 97151675.55673134,
+     "actual": 253674255.4279422,
+     "series_origin_count": 7987
+    },
+    "erratic": {
+     "wmape": 0.6146132558508924,
+     "abs_err": 86885105.65358,
+     "actual": 141365492.57027197,
+     "series_origin_count": 6380
+    },
+    "intermittent": {
+     "wmape": 1.221793239453916,
+     "abs_err": 25551913.580254175,
+     "actual": 20913451.437720083,
+     "series_origin_count": 12537
+    },
+    "lumpy": {
+     "wmape": 0.996510068615458,
+     "abs_err": 30588989.661475424,
+     "actual": 30696117.003589824,
+     "series_origin_count": 7755
+    },
+    "short": {
+     "wmape": 0.8736947310708122,
+     "abs_err": 49104919.44928572,
+     "actual": 56203749.093349874,
+     "series_origin_count": 8980
+    },
+    "dormant": {
+     "wmape": 1.0,
+     "abs_err": 868317.1986834998,
+     "actual": 868317.1986834998,
+     "series_origin_count": 8913
+    }
+   }
+  },
+  "gbm_units_poisson": {
+   "wmape_series_all": 0.540728936588583,
+   "bias_all": 0.05428051304716915,
+   "wmape_series_existing": 0.5308349595463151,
+   "wmape_total_level": 0.09731059506948414,
+   "by_class": {
+    "smooth": {
+     "wmape": 0.36137509016732156,
+     "abs_err": 91671556.92840077,
+     "actual": 253674255.4279422,
+     "series_origin_count": 7987
+    },
+    "erratic": {
+     "wmape": 0.6027512401724696,
+     "abs_err": 85208225.96432348,
+     "actual": 141365492.57027197,
+     "series_origin_count": 6380
+    },
+    "intermittent": {
+     "wmape": 0.9196258337063445,
+     "abs_err": 19232550.21409048,
+     "actual": 20913451.437720083,
+     "series_origin_count": 12537
+    },
+    "lumpy": {
+     "wmape": 0.818257843051275,
+     "abs_err": 25117338.489406977,
+     "actual": 30696117.003589824,
+     "series_origin_count": 7755
+    },
+    "short": {
+     "wmape": 0.8059058650123817,
+     "abs_err": 45294931.03001499,
+     "actual": 56203749.093349874,
+     "series_origin_count": 8980
+    },
+    "dormant": {
+     "wmape": 1.0,
+     "abs_err": 868317.1986834998,
+     "actual": 868317.1986834998,
+     "series_origin_count": 8913
+    }
+   }
+  },
+  "chon_theo_cum": {
+   "wmape_series_all": 0.5223250881513671,
+   "bias_all": 0.02733984893726343,
+   "wmape_series_existing": 0.5120346409884375,
+   "wmape_total_level": 0.08158080879114284,
+   "by_class": {
+    "smooth": {
+     "wmape": 0.36137509016732156,
+     "abs_err": 91671556.92840077,
+     "actual": 253674255.4279422,
+     "series_origin_count": 7987
+    },
+    "erratic": {
+     "wmape": 0.5725894196331855,
+     "abs_err": 80944385.34697144,
+     "actual": 141365492.57027197,
+     "series_origin_count": 6380
+    },
+    "intermittent": {
+     "wmape": 0.9196258337063445,
+     "abs_err": 19232550.21409048,
+     "actual": 20913451.437720083,
+     "series_origin_count": 12537
+    },
+    "lumpy": {
+     "wmape": 0.818257843051275,
+     "abs_err": 25117338.489406977,
+     "actual": 30696117.003589824,
+     "series_origin_count": 7755
+    },
+    "short": {
+     "wmape": 0.7132735775511199,
+     "abs_err": 40088649.187599175,
+     "actual": 56203749.093349874,
+     "series_origin_count": 8980
+    },
+    "dormant": {
+     "wmape": 1.0,
+     "abs_err": 868317.1986834998,
+     "actual": 868317.1986834998,
+     "series_origin_count": 8913
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,15 @@
+quy tắc,nhóm,vi phạm,tổng kiểm tra,%,ghi chú
+R1  sales < 0,miền giá trị,0,2950388,0.0,cả 3 phase
+R2  sales không phải số nguyên,miền giá trị,0,2950388,0.0,cả 3 phase
+R3  giá <= 0 khi sales > 0,miền giá trị,5605,808203,0.6935138820321133,giá 0 là giá trị giả dạng thiếu
+R4  có giá khi sales = 0,liên trường,0,1946496,0.0,
+R5  giá trống khi sales > 0,liên trường,0,808203,0.0,
+"R6  cùng sản phẩm, cùng tuần, giá chênh > 10 lần giữa các chuỗi",proxy chính xác,3357,108983,3.0802969270436673,"đơn vị: cặp (sản phẩm, tuần) có từ 2 giá"
+R7  giá nhảy > 10 lần so với tuần liền trước,proxy chính xác,354,669492,0.05287591188542955,đơn vị: cặp tuần liền nhau đều có giá
+R8  sales > 20 lần trung vị các tuần có bán của chuỗi,proxy chính xác,1495,808203,0.18497827897199093,"phần lớn là mùa cao điểm, xem phần EDA"
+R9  sales lặp lại y hệt >= 13 tuần liên tiếp,proxy chính xác,20557,808203,2.543544134332587,374 chuỗi; dấu hiệu giá trị được điền
+R10 Phase 1 bắt đầu đúng 7 ngày sau Phase 0,thời gian,0,1,0.0,
+R11 Phase 2 bắt đầu đúng 7 ngày sau Phase 1,thời gian,0,1,0.0,
+R12 khóa của Phase 2 giống hệt Phase 1,liên file,0,15053,0.0,
+"R13 khóa của file Price giống hệt file Sales (Phase 0, 1)",liên file,0,30106,0.0,
+R14 chuỗi không bán gì trong cả Phase 0 + 1,liên trường,0,15053,0.0,

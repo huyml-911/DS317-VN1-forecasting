@@ -1,0 +1,382 @@
+{
+ "origins": {
+  "1": {
+   "index": 131,
+   "last_week_used": "2023-01-02",
+   "forecast_from": "2023-01-09"
+  },
+  "2": {
+   "index": 144,
+   "last_week_used": "2023-04-03",
+   "forecast_from": "2023-04-10"
+  },
+  "3": {
+   "index": 157,
+   "last_week_used": "2023-07-03",
+   "forecast_from": "2023-07-10"
+  },
+  "4": {
+   "index": 170,
+   "last_week_used": "2023-10-02",
+   "forecast_from": "2023-10-09"
+  }
+ },
+ "flat_period_cut": {
+  "rows_removed_from_history": 64328,
+  "series_affected": 657
+ },
+ "imputed_share_origin1": {
+  "seasonal_strength": 0.1742881794650561,
+  "trend": 0.29738280126545874,
+  "q4_share": 0.1742881794650561
+ },
+ "k_selection": [
+  {
+   "k": 3,
+   "kmeans_silhouette": 0.2382934872156046,
+   "kmeans_davies_bouldin": 1.8229898245176734,
+   "kmeans_min_cluster_share": 0.1366120218579235,
+   "ward_silhouette": 0.14664051092074892,
+   "ward_davies_bouldin": 2.245283072919956,
+   "ari_kmeans_vs_ward": 0.40904351511334475
+  },
+  {
+   "k": 4,
+   "kmeans_silhouette": 0.1685179190804703,
+   "kmeans_davies_bouldin": 1.7763844850611634,
+   "kmeans_min_cluster_share": 0.09275237273511648,
+   "ward_silhouette": 0.16457268504213643,
+   "ward_davies_bouldin": 1.9703474272806791,
+   "ari_kmeans_vs_ward": 0.4205458063800345
+  },
+  {
+   "k": 5,
+   "kmeans_silhouette": 0.1756604476301061,
+   "kmeans_davies_bouldin": 1.6024426086036612,
+   "kmeans_min_cluster_share": 0.06514236410698879,
+   "ward_silhouette": 0.15838025428193744,
+   "ward_davies_bouldin": 1.76949638323097,
+   "ari_kmeans_vs_ward": 0.4203070463093506
+  },
+  {
+   "k": 6,
+   "kmeans_silhouette": 0.18229004972253574,
+   "kmeans_davies_bouldin": 1.5500465856808319,
+   "kmeans_min_cluster_share": 0.02300834052343975,
+   "ward_silhouette": 0.12413180463788101,
+   "ward_davies_bouldin": 2.021806321820833,
+   "ari_kmeans_vs_ward": 0.44578915662443164
+  },
+  {
+   "k": 7,
+   "kmeans_silhouette": 0.18252717698618554,
+   "kmeans_davies_bouldin": 1.5103123639004465,
+   "kmeans_min_cluster_share": 0.022145527753810755,
+   "ward_silhouette": 0.12460865783499556,
+   "ward_davies_bouldin": 1.8829022302984268,
+   "ari_kmeans_vs_ward": 0.4123054540127725
+  },
+  {
+   "k": 8,
+   "kmeans_silhouette": 0.16750672382740261,
+   "kmeans_davies_bouldin": 1.6872743461352515,
+   "kmeans_min_cluster_share": 0.022145527753810755,
+   "ward_silhouette": 0.1239379250196002,
+   "ward_davies_bouldin": 1.8325400305721193,
+   "ari_kmeans_vs_ward": 0.3531993537027859
+  }
+ ],
+ "sb_silhouette_in_feature_space": 0.07529271199620768,
+ "sb_davies_bouldin": 2.7916304323431937,
+ "clusters_origin1": {
+  "B1 Chủ lực bán đều": {
+   "n_series": 1929,
+   "share_series": 0.27739430543572047,
+   "share_revenue_last52": 0.7369892940488268,
+   "median": {
+    "zero_share": 0.031746031746031744,
+    "adi": 1.0327868852459017,
+    "cv2": 0.42833414455094704,
+    "mean_nz": 27.282442748091604,
+    "rev52": 636.5371147307693,
+    "seasonal_strength": 0.2726898352539356,
+    "trend": 0.06035975624716153,
+    "zero_run": 0.0,
+    "price_median": 26.12423,
+    "price_cv": 0.07813481252684153,
+    "q4_share": 0.2518220086831452,
+    "age": 103.0
+   },
+   "share_test_revenue": 0.785981440452325
+  },
+  "B2 Sản phẩm giá cao": {
+   "n_series": 454,
+   "share_series": 0.06528616623526028,
+   "share_revenue_last52": 0.19228987820699994,
+   "median": {
+    "zero_share": 0.2992311507936508,
+    "adi": 1.427020202020202,
+    "cv2": 0.6268255296507201,
+    "mean_nz": 4.4523809523809526,
+    "rev52": 1535.69529625,
+    "seasonal_strength": 0.15705879435374917,
+    "trend": -0.06487188621172553,
+    "zero_run": 0.0,
+    "price_median": 346.8734575,
+    "price_cv": 0.1726943937092568,
+    "q4_share": 0.17864235175811807,
+    "age": 124.5
+   },
+   "share_test_revenue": 0.10884839901051462
+  },
+  "B3 Mùa vụ cuối năm": {
+   "n_series": 618,
+   "share_series": 0.08886971527178603,
+   "share_revenue_last52": 0.0456355915204686,
+   "median": {
+    "zero_share": 0.447029497299543,
+    "adi": 1.8084239130434783,
+    "cv2": 1.6900531243774486,
+    "mean_nz": 15.746944770857814,
+    "rev52": 162.7737506394231,
+    "seasonal_strength": 0.4105046514494106,
+    "trend": -0.08632471421231266,
+    "zero_run": 0.0,
+    "price_median": 22.2069695,
+    "price_cv": 0.11258813980839918,
+    "q4_share": 0.6765788756643742,
+    "age": 105.0
+   },
+   "share_test_revenue": 0.07125710491544769
+  },
+  "B4 Bán ngắt quãng, quy mô nhỏ": {
+   "n_series": 2147,
+   "share_series": 0.3087431693989071,
+   "share_revenue_last52": 0.02206132920991796,
+   "median": {
+    "zero_share": 0.41860465116279066,
+    "adi": 1.72,
+    "cv2": 0.5094444444444445,
+    "mean_nz": 2.72,
+    "rev52": 44.93692286538461,
+    "seasonal_strength": 0.1711084450926695,
+    "trend": -0.18241655300982454,
+    "zero_run": 0.0,
+    "price_median": 27.056665,
+    "price_cv": 0.08504010856763511,
+    "q4_share": 0.22941176581167863,
+    "age": 103.0
+   },
+   "share_test_revenue": 0.02733329117298057
+  },
+  "B5 Bán thưa, lượng nhỏ": {
+   "n_series": 1806,
+   "share_series": 0.25970664365832613,
+   "share_revenue_last52": 0.0030239070137865302,
+   "median": {
+    "zero_share": 0.8461538461538461,
+    "adi": 6.5,
+    "cv2": 0.12500000000000006,
+    "mean_nz": 1.28,
+    "rev52": 5.347517730496454,
+    "seasonal_strength": 0.13767887205387203,
+    "trend": -0.29227330597158896,
+    "zero_run": 6.0,
+    "price_median": 30.0,
+    "price_cv": 0.07505219274652264,
+    "q4_share": 0.23811704368531916,
+    "age": 83.0
+   },
+   "share_test_revenue": 0.006579764448731921
+  }
+ },
+ "final_k": 5,
+ "final_silhouette": 0.17544538661682493,
+ "flags_by_origin": {
+  "1": {
+   "q4_seasonal": 1427,
+   "price_noisy": 25
+  },
+  "2": {
+   "q4_seasonal": 1349,
+   "price_noisy": 47
+  },
+  "3": {
+   "q4_seasonal": 1374,
+   "price_noisy": 54
+  },
+  "4": {
+   "q4_seasonal": 1595,
+   "price_noisy": 51
+  }
+ },
+ "flag_q4_by_label_A_origin1": {
+  "smooth": 36,
+  "erratic": 319,
+  "intermittent": 492,
+  "lumpy": 580
+ },
+ "eligibility_by_origin": {
+  "1": {
+   "eligible": 6954,
+   "new": 6318,
+   "dormant": 1777,
+   "no_price": 4
+  },
+  "2": {
+   "eligible": 8167,
+   "new": 4825,
+   "dormant": 2036,
+   "no_price": 25
+  },
+  "3": {
+   "eligible": 9077,
+   "new": 3611,
+   "dormant": 2342,
+   "no_price": 23
+  },
+  "4": {
+   "eligible": 9770,
+   "dormant": 2724,
+   "new": 2534,
+   "no_price": 25
+  }
+ },
+ "test_revenue_share_by_eligibility_origin1": {
+  "eligible": 0.56773063750547,
+  "new": 0.4283170790437105,
+  "dormant": 0.003937436187475492,
+  "no_price": 1.4847263344023897e-05
+ },
+ "crosstab_A_vs_B_origin1": {
+  "smooth": {
+   "B1 Chủ lực bán đều": 1080,
+   "B2 Sản phẩm giá cao": 61,
+   "B3 Mùa vụ cuối năm": 0,
+   "B4 Bán ngắt quãng, quy mô nhỏ": 242,
+   "B5 Bán thưa, lượng nhỏ": 0
+  },
+  "erratic": {
+   "B1 Chủ lực bán đều": 690,
+   "B2 Sản phẩm giá cao": 122,
+   "B3 Mùa vụ cuối năm": 192,
+   "B4 Bán ngắt quãng, quy mô nhỏ": 282,
+   "B5 Bán thưa, lượng nhỏ": 0
+  },
+  "intermittent": {
+   "B1 Chủ lực bán đều": 59,
+   "B2 Sản phẩm giá cao": 83,
+   "B3 Mùa vụ cuối năm": 28,
+   "B4 Bán ngắt quãng, quy mô nhỏ": 768,
+   "B5 Bán thưa, lượng nhỏ": 1621
+  },
+  "lumpy": {
+   "B1 Chủ lực bán đều": 100,
+   "B2 Sản phẩm giá cao": 188,
+   "B3 Mùa vụ cuối năm": 398,
+   "B4 Bán ngắt quãng, quy mô nhỏ": 855,
+   "B5 Bán thưa, lượng nhỏ": 185
+  }
+ },
+ "ari_A_vs_B_origin1": 0.29262965984330674,
+ "A_origin1": {
+  "smooth": {
+   "n_series": 1383,
+   "share_series": 0.19887834339948232,
+   "share_revenue_last52": 0.5010668338339503,
+   "share_test_revenue": 0.5049038125756088
+  },
+  "erratic": {
+   "n_series": 1286,
+   "share_series": 0.18492953695714698,
+   "share_revenue_last52": 0.3614562335237828,
+   "share_test_revenue": 0.3249969175235777
+  },
+  "intermittent": {
+   "n_series": 2559,
+   "share_series": 0.36798964624676445,
+   "share_revenue_last52": 0.04909403170626803,
+   "share_test_revenue": 0.0519617810291466
+  },
+  "lumpy": {
+   "n_series": 1726,
+   "share_series": 0.24820247339660628,
+   "share_revenue_last52": 0.08838290093599876,
+   "share_test_revenue": 0.11813748887166677
+  }
+ },
+ "stability": {
+  "1->2": {
+   "n_series_eligible_in_both": 6593,
+   "ari_A": 0.7986044904551464,
+   "ari_B": 0.7006389036560948,
+   "switch_share_A": 0.08327013499165782,
+   "switch_share_B": 0.12725618079781587,
+   "eligible_then_dormant": 361,
+   "new_then_eligible": 1332
+  },
+  "2->3": {
+   "n_series_eligible_in_both": 7735,
+   "ari_A": 0.7826524946484062,
+   "ari_B": 0.730151606406945,
+   "switch_share_A": 0.0907563025210084,
+   "switch_share_B": 0.11661279896574014,
+   "eligible_then_dormant": 432,
+   "new_then_eligible": 1034
+  },
+  "3->4": {
+   "n_series_eligible_in_both": 8472,
+   "ari_A": 0.8114615681081432,
+   "ari_B": 0.7388033462770001,
+   "switch_share_A": 0.07813975448536355,
+   "switch_share_B": 0.10989140698772427,
+   "eligible_then_dormant": 605,
+   "new_then_eligible": 916
+  }
+ },
+ "stay_rate_A_1->2": {
+  "smooth": 0.8989090909090909,
+  "erratic": 0.9042056074766355,
+  "intermittent": 0.9432562199912702,
+  "lumpy": 0.9044430919050518
+ },
+ "stay_rate_B_1->2": {
+  "B1 Chủ lực bán đều": 0.9306930693069307,
+  "B2 Sản phẩm giá cao": 0.9479638009049773,
+  "B3 Mùa vụ cuối năm": 0.7779578606158833,
+  "B4 Bán ngắt quãng, quy mô nhỏ": 0.832937826293308,
+  "B5 Bán thưa, lượng nhỏ": 0.8713527851458885
+ },
+ "pca_explained_variance": [
+  0.37140693210584974,
+  0.1332410437621638
+ ],
+ "pca_loadings": {
+  "PC1": {
+   "zero_share": 0.44665342728199486,
+   "log_adi": 0.44117600693120385,
+   "log_cv2": -0.22519658175921198,
+   "log_mean_nz": -0.414942411376809,
+   "log_rev52": -0.4457368554919995,
+   "seasonal_strength": -0.20866707229196077,
+   "trend": -0.08421702586366825,
+   "log_recency": 0.3613769145867557,
+   "log_price": -0.028274571330545947,
+   "price_cv": -0.03479994964911119,
+   "q4_share": -0.03246814571832389
+  },
+  "PC2": {
+   "zero_share": 0.21568322053236835,
+   "log_adi": 0.18727269002683783,
+   "log_cv2": 0.3581798719200241,
+   "log_mean_nz": 0.07354296678763371,
+   "log_rev52": -0.1789410967224599,
+   "seasonal_strength": 0.41066794662655803,
+   "trend": 0.11079375954289934,
+   "log_recency": -0.10178835841915856,
+   "log_price": -0.3473513641427961,
+   "price_cv": 0.12617020372862142,
+   "q4_share": 0.6517915336298226
+  }
+ }
+}

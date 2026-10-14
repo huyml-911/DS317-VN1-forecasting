@@ -1,0 +1,10 @@
+# Dữ liệu: tải lại bằng Kaggle CLI và chạy scripts/01_clean.py (xem README)
+raw/
+clean/
+# File dự báo lớn, tạo lại được bằng script
+*.parquet
+# Bộ nhớ đệm và file tạm
+**/_cache*/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
